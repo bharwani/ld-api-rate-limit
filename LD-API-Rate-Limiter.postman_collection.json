@@ -1,0 +1,183 @@
+{
+	"info": {
+		"_postman_id": "ebcc5f9d-3a77-4df1-9b94-0e0855a56cfe",
+		"name": "LD-API-Rate-Limiter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get stock level for all flavors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "1243",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/flavors/Chocolate",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"flavors",
+						"Chocolate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get stock level per Flavor - Chocolate",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "1243",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/flavors/Chocolate",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"flavors",
+						"Chocolate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new flavor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "1243",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": FLAVOR_NAME, \"stock\": FLAVOR_AMOUNT}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/flavors",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"flavors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify an existing flavor",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "1243",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "1243",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": NEW_FLAVOR_NAME, \"stock\": NEW_FLAVOR_AMOUNT}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/flavors",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"flavors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a flavor",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "1243",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "1243",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": NEW_FLAVOR_NAME, \"stock\": NEW_FLAVOR_AMOUNT}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/flavors",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"flavors"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
